@@ -1,0 +1,6 @@
+/Users/danielcardena/Desktop/Curso Xamarin Forms/Proyecto/XamFormsTVSeries/XamFormsTVSeries/obj/Debug/netstandard2.0/XamFormsTVSeries.csprojAssemblyReference.cache
+/Users/danielcardena/Desktop/Curso Xamarin Forms/Proyecto/XamFormsTVSeries/XamFormsTVSeries/obj/Debug/netstandard2.0/App.xaml.g.cs
+/Users/danielcardena/Desktop/Curso Xamarin Forms/Proyecto/XamFormsTVSeries/XamFormsTVSeries/obj/Debug/netstandard2.0/MainPage.xaml.g.cs
+/Users/danielcardena/Desktop/Curso Xamarin Forms/Proyecto/XamFormsTVSeries/XamFormsTVSeries/obj/Debug/netstandard2.0/XamFormsTVSeries.csproj.CoreCompileInputs.cache
+/Users/danielcardena/Desktop/Curso Xamarin Forms/Proyecto/XamFormsTVSeries/XamFormsTVSeries/obj/Debug/netstandard2.0/XamFormsTVSeries.AssemblyInfoInputs.cache
+/Users/danielcardena/Desktop/Curso Xamarin Forms/Proyecto/XamFormsTVSeries/XamFormsTVSeries/obj/Debug/netstandard2.0/XamFormsTVSeries.AssemblyInfo.cs
