@@ -9,7 +9,7 @@ namespace XamFormsTVSeries.Services
     public class TVSeriesAPIService : ITVSeriesAPIService
     {
         private const string TVshowDns = "http://api-public.guidebox.com/v2/";
-        private const string APIKey = "?api_key=YOUR_API_KEY";
+        private const string APIKey = "fd8155f202e2f760a4a443d8c82f9b9c397e0e67";
         private const string ShowEndPoint = "shows";
         private const string EpisodesEndPoint = "episodes";
 
