@@ -13,10 +13,7 @@ namespace XamFormsTVSeries.Models
 		public int container_show { get; set; }
 		public string first_aired { get; set; }
 		public string network { get; set; }
-		public List<Channel> channels { get; set; }
 		public int runtime { get; set; }
-		public List<Genre> genres { get; set; }
-		public List<Tag> tags { get; set; }
 		public List<Cast> cast { get; set; }
 		public string overview { get; set; }
 		public string air_day_of_week { get; set; }
@@ -30,8 +27,6 @@ namespace XamFormsTVSeries.Models
 		public string metacritic { get; set; }
 		public string common_sense_media { get; set; }
 		public int? wikipedia_id { get; set; }
-		public TVRage tvrage { get; set; }
-		public Social social { get; set; }
 		public string fanart { get; set; }
 		public string poster { get; set; }
 		public string banner { get; set; }
