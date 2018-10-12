@@ -187,3 +187,4 @@ FakesAssemblies/
 XamFormsTVSeries/obj
 XamFormsTVSeries.Android/obj
 XamFormsTVSeries.iOS/obj
+XamFormsTVSeries.Android/Resources/Resource.designer.cs
