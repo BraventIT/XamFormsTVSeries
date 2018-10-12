@@ -18,8 +18,8 @@ namespace XamFormsTVSeries.Views
             // Navigation to detail page
             this.listCharacters.ItemSelected += (object sender, SelectedItemChangedEventArgs e) =>
             {
-                var character = (TVShowItemViewModel)e.SelectedItem;
-                var detailVm = new DetailViewModel(character);
+                TVShowItemViewModel show = (TVShowItemViewModel)e.SelectedItem;
+                var detailVm = new DetailViewModel(show);
 
                 var detailView = new DetailView(detailVm);
 

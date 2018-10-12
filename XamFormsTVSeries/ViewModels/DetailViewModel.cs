@@ -1,15 +1,16 @@
 ﻿using Xamarin.Forms;
 using System.Windows.Input;
+using XamFormsTVSeries.Services;
 
 namespace XamFormsTVSeries.ViewModels
 {
 	public class DetailViewModel : BaseViewModel
-	{
+    {
 
-		public DetailViewModel (TVShowItemViewModel show)
+        public DetailViewModel (TVShowItemViewModel show)
 		{
 			ShowItem = show;
-		}
+        }
 
 		#region Character
 
