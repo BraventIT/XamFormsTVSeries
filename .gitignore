@@ -182,12 +182,8 @@ FakesAssemblies/
 *.userprefs
 
 .DS_Store
-.vs/iMar/xs/UserPrefs.xml
-.vs/iMar/v15/Server/sqlite3/db.lock
-.vs/iMar/v15/Server/sqlite3/storage.ide
-.vs/iMar/v15/Server/sqlite3/storage.ide-shm
-.vs/iMar/v15/Server/sqlite3/storage.ide-wal
-.vs/iMar/DesignTimeBuild/.dtbcache
 .idea
 .vs
-.vs/iMar/DesignTimeBuild/.dtbcache
+XamFormsTVSeries/obj
+XamFormsTVSeries.Android/obj
+XamFormsTVSeries.iOS/obj
