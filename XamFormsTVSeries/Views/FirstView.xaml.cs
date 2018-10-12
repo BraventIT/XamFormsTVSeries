@@ -19,7 +19,7 @@ namespace XamFormsTVSeries.Views
             this.listCharacters.ItemSelected += (object sender, SelectedItemChangedEventArgs e) =>
             {
                 TVShowItemViewModel show = (TVShowItemViewModel)e.SelectedItem;
-                var detailVm = new DetailViewModel(show);
+                var detailVm = new DetailViewModel(show.Id);
 
                 var detailView = new DetailView(detailVm);
 
@@ -39,8 +39,12 @@ namespace XamFormsTVSeries.Views
 
             _vm = new FirstViewModel();
             BindingContext = _vm;
-            Task.Run(async () => await _vm.Init());
+        }
 
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            Task.Run(async () => await _vm.Init());
         }
 
     }

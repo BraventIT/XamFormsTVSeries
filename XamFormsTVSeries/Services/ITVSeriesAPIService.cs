@@ -7,7 +7,7 @@ namespace XamFormsTVSeries.Services
     public interface ITVSeriesAPIService
     {
         Task<TVShowsApiData<Show>> GetShowsAsync();
-        Task<TVShowsApiData<Show>> GetShowByIdAsync(string id);
-        Task<TVShowsApiData<Episode>> GetEpisodesFromShow(string id);
+        Task<Show> GetShowByIdAsync(int id);
+        Task<TVShowsApiData<Episode>> GetEpisodesFromShow(int id);
     }
 }

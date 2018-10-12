@@ -3,7 +3,7 @@
             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
             x:Class="XamFormsTVSeries.Views.FirstView"
             xmlns:local="clr-namespace:XamFormsTVSeries.Views;assembly=XamFormsTVSeries"
-            Title="Marvel Characters">
+            Title="TV Shows">
     <ContentPage.Content>
         <Grid>
             <Grid.RowDefinitions>

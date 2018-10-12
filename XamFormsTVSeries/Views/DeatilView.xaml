@@ -5,19 +5,19 @@
              xmlns:control="clr-namespace:XamFormsTVSeries.Controls;assembly=XamFormsTVSeries"
              Title="{Binding ShowItem.Name}">
     <ContentPage.Content>
-        <Grid  BackgroundColor="#F44336">
+            <Grid BackgroundColor="#F44336">
             <Grid.RowDefinitions>
+                <RowDefinition Height="35*"></RowDefinition>
                 <RowDefinition Height="65*"></RowDefinition>
-                <RowDefinition Height="30*"></RowDefinition>
                 <RowDefinition Height="Auto"></RowDefinition>
             </Grid.RowDefinitions>
             
-            <control.ImageCircle Source="{Binding show.Thumbnail}" 
+         <!--   <control.ImageCircle Source="{Binding show.Thumbnail}" 
                 Grid.Row="0" 
                 HorizontalOptions="FillAndExpand" 
                 VerticalOptions="FillAndExpand" 
                 Aspect="Fill">
-            </control.ImageCircle>
+            </control.ImageCircle>-->
 
 
             <Image Source="{Binding ShowItem.Thumbnail}" 
@@ -39,7 +39,9 @@
                 <Button Text="Open Web" TextColor="White" Command="{Binding OpenWeb}"></Button>
             </StackLayout>
 
-
-        </Grid>
+            <ActivityIndicator Grid.RowSpan="3" IsVisible="{Binding IsBusy}" IsRunning="{Binding IsBusy}"
+                          VerticalOptions="Center" HorizontalOptions="Center" BackgroundColor="Transparent" />
+        </Grid>     
+        
     </ContentPage.Content>
 </ContentPage>

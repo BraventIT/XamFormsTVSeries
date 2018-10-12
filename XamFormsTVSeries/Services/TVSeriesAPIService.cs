@@ -19,17 +19,17 @@ namespace XamFormsTVSeries.Services
             return result;
         }
 
-        async Task<TVShowsApiData<Episode>> ITVSeriesAPIService.GetEpisodesFromShow(string id)
+        async Task<TVShowsApiData<Episode>> ITVSeriesAPIService.GetEpisodesFromShow(int id)
         {
             string endPoint = $"{ShowEndPoint}/{id}/{EpisodesEndPoint}";
             var result = await this.MakeHttpCall<TVShowsApiData<Episode>>(endPoint);
             return result;
         }
 
-        async Task<TVShowsApiData<Show>> ITVSeriesAPIService.GetShowByIdAsync(string id)
+        async Task<Show> ITVSeriesAPIService.GetShowByIdAsync(int id)
         {
             string endPoint = $"{ShowEndPoint}/{id}";
-            var result = await this.MakeHttpCall<TVShowsApiData<Show>>(endPoint);
+            var result = await this.MakeHttpCall<Show>(endPoint);
             return result;
         }
 
