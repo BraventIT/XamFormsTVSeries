@@ -12,9 +12,9 @@ namespace XamFormsTVSeries.ViewModels
     {
 		private readonly ITVSeriesAPIService _tvShowsService;
 
-		public FirstViewModel (ITVSeriesAPIService marvelService = null)
+		public FirstViewModel (ITVSeriesAPIService tvShowsService = null)
 		{
-            _tvShowsService = marvelService ?? DependencyService.Get<ITVSeriesAPIService>();
+            _tvShowsService = tvShowsService ?? DependencyService.Get<ITVSeriesAPIService>();
 
 		}
 

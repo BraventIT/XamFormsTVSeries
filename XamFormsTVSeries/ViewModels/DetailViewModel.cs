@@ -2,8 +2,6 @@
 using System.Windows.Input;
 using XamFormsTVSeries.Services;
 using System.Threading.Tasks;
-using System;
-using System.Linq;
 
 namespace XamFormsTVSeries.ViewModels
 {
@@ -11,32 +9,56 @@ namespace XamFormsTVSeries.ViewModels
     {
         private readonly ITVSeriesAPIService _tvShowsService;
         private readonly IOpenWebService _openWebService;
-        string _showId;
+        private readonly int _id;
 
-        public DetailViewModel (string showId , ITVSeriesAPIService tvShoeService = null, IOpenWebService openWebService = null)
+        #region Character
+
+        private TVShowItemViewModel _ShowItem;
+
+        public TVShowItemViewModel ShowItem
         {
-            _tvShowsService = tvShoeService ?? DependencyService.Get<ITVSeriesAPIService>();
+            get
+            {
+                return _ShowItem;
+			}
+            set
+            {
+                _ShowItem = value;
+				RaisePropertyChanged();
+			}
+		
+        }
+
+        #endregion
+
+        public DetailViewModel(int id, ITVSeriesAPIService tvShowsService = null, IOpenWebService openWebService = null)
+        {
+            _tvShowsService = tvShowsService ?? DependencyService.Get<ITVSeriesAPIService>();
             _openWebService = openWebService ?? DependencyService.Get<IOpenWebService>();
-            _showId = showId;
+            _id = id;
         }
 
         public async Task Init()
         {
-            await LoadDataAsync();
+            await LoadData();
         }
 
-        private async Task LoadDataAsync()
+        #region LoadData
+
+        private async Task LoadData()
         {
             IsBusy = true;
-            var result = await _tvShowsService.GetShowByIdAsync(_showId);
+
+            var result = await _tvShowsService.GetShowByIdAsync(_id);
+
+
             if (result != null)
             {
                 ShowItem = new TVShowItemViewModel()
                 {
                     Id = result.id,
                     Name = result.title,
-                    Thumbnail = result.artwork_208x117,
-                    BigImage = result.artwork_608x342,
+                    Thumbnail = result.artwork_448x252,
                     Description = result.overview,
                     URL = result.tv_com
                 };
@@ -45,20 +67,6 @@ namespace XamFormsTVSeries.ViewModels
             IsBusy = false;
 
         }
-
-        #region Character
-
-        private TVShowItemViewModel _ShowItem;
-
-		public TVShowItemViewModel ShowItem {
-			get {
-                return _ShowItem;
-			}
-			set {
-                _ShowItem = value;
-				RaisePropertyChanged();
-			}
-		}
 
         #endregion
 
