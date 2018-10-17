@@ -19,7 +19,7 @@ namespace XamFormsTVSeries.Views
             this.listCharacters.ItemSelected += (object sender, SelectedItemChangedEventArgs e) =>
             {
                 TVShowItemViewModel show = (TVShowItemViewModel)e.SelectedItem;
-                var detailVm = new DetailViewModel(show);
+                var detailVm = new DetailViewModel(show.Id.ToString());
 
                 var detailView = new DetailView(detailVm);
 

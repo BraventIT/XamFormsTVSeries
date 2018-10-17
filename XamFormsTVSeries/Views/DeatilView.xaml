@@ -12,7 +12,7 @@
                 <RowDefinition Height="Auto"></RowDefinition>
             </Grid.RowDefinitions>
             
-            <control.ImageCircle Source="{Binding show.Thumbnail}" 
+            <control.ImageCircle Source="{Binding show.BigImage}" 
                 Grid.Row="0" 
                 HorizontalOptions="FillAndExpand" 
                 VerticalOptions="FillAndExpand" 

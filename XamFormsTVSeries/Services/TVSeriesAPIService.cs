@@ -26,10 +26,10 @@ namespace XamFormsTVSeries.Services
             return result;
         }
 
-        async Task<TVShowsApiData<Show>> ITVSeriesAPIService.GetShowByIdAsync(string id)
+        async Task<Show> ITVSeriesAPIService.GetShowByIdAsync(string id)
         {
             string endPoint = $"{ShowEndPoint}/{id}";
-            var result = await this.MakeHttpCall<TVShowsApiData<Show>>(endPoint);
+            var result = await this.MakeHttpCall<Show>(endPoint);
             return result;
         }
 

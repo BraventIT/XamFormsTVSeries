@@ -67,8 +67,47 @@ namespace XamFormsTVSeries.ViewModels
 			}
 		}
 
-		#endregion
+        #endregion
 
-	}
+        #region Description
+
+        private string _URL;
+
+        public string URL
+        {
+            get
+            {
+                return _URL;
+            }
+            set
+            {
+                _URL = value;
+                RaisePropertyChanged();
+            }
+        }
+
+        #endregion
+
+        #region Description
+
+        private string _BigImage;
+
+        public string BigImage
+        {
+            get
+            {
+                return _BigImage;
+            }
+            set
+            {
+                _BigImage = value;
+                RaisePropertyChanged();
+            }
+        }
+
+        #endregion
+
+
+    }
 }
 

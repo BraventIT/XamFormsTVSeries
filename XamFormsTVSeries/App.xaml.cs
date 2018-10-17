@@ -16,6 +16,7 @@ namespace XamFormsTVSeries
             // Register our Services
             DependencyService.Register<ITVSeriesAPIService, TVSeriesAPIService>();
 
+
             // The root page of your application
             MainPage = new NavigationPage(new FirstView());
         }
