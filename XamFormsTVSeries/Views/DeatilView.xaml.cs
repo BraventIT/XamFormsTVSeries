@@ -15,14 +15,9 @@ namespace XamFormsTVSeries.Views
         public DetailView(DetailViewModel detailvm)
         {
             InitializeComponent();
-            _vm = detailvm;
-            this.BindingContext = _vm;
-        }
 
-        protected override void OnAppearing()
-        {
-            base.OnAppearing();
-            Task.Run(async () => await _vm.Init());
+            // TODO: AO. Enlazar el ViewModel con la vista a partir del BindingContext
+
         }
     }
 }

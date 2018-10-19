@@ -13,12 +13,9 @@ namespace XamFormsTVSeries
         {
             InitializeComponent();
 
-            // Register our Services
-            DependencyService.Register<ITVSeriesAPIService, TVSeriesAPIService>();
+            // TODO: AC. Register TVShow Service in DependencyService
 
-
-            // The root page of your application
-            MainPage = new NavigationPage(new FirstView());
+            // TODO: AD. Set the MainPage un nuevo NavigationPage que vaya al FirstView
         }
 
         protected override void OnStart()

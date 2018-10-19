@@ -13,32 +13,17 @@ namespace XamFormsTVSeries.Views
 
         public FirstView()
         {
-            InitializeComponent();
-
-            // Navigation to detail page
-            this.listCharacters.ItemSelected += (object sender, SelectedItemChangedEventArgs e) =>
-            {
-                TVShowItemViewModel show = (TVShowItemViewModel)e.SelectedItem;
-                var detailVm = new DetailViewModel(show.Id);
-
-                var detailView = new DetailView(detailVm);
-
-                this.Navigation.PushAsync(detailView);
-            };
+            // TODO: AI. Diseñar la primera ventana FirstView
 
 
-            Device.OnPlatform(WinPhone: () =>
-                       listCharacters.ItemTemplate = new DataTemplate(() =>
-                       {
-                           var nativeCell = new NativeCell();
-                           nativeCell.SetBinding(NativeCell.NameProperty, "Name");
-                           nativeCell.SetBinding(NativeCell.ThumbnailProperty, "Thumbnail");
+            // TODO: AP. Realizar la navegación en code behind
 
-                           return nativeCell;
-                       }));
+            // TODO: AQ. Probar a ejecutar la aplicación
 
-            _vm = new FirstViewModel();
-            BindingContext = _vm;
+
+            // TODO: AK. Enlazar el ViewModel con la vista a partir del BindingContext y realizar la carga de los datos llamando a LoadData
+
+            // TODO: AL. Probar a ejecutar la aplicación
         }
 
         protected override void OnAppearing()
